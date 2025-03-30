@@ -5,15 +5,13 @@
 class Veil < Formula
   desc "Veil - An opinionated, fully featured, modular observability stack for APIs. Allows you to sell, monitor, authenticate your APIs."
   homepage "https://github.com/try-veil/veil"
-  version "0.0.0-release-test"
+  version "0.0.0-gorelease-test"
   license "MIT"
-
-  depends_on "xcaddy"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/try-veil/veil/releases/download/v0.0.0-release-test/veil_0.0.0-release-test_Darwin_arm64.tar.gz"
-      sha256 "fa07a884983aa3051c83325e65d5ff8754f2bebf4a682706c7ef98c3821af78e"
+      url "https://github.com/try-veil/veil/releases/download/v0.0.0-gorelease-test/veil_0.0.0-gorelease-test_Darwin_arm64.tar.gz"
+      sha256 "dba0fade340c12f2110c511be0b29ea0ae923ac8d15d937955400832d84fdd54"
 
       def install
         bin.install "veil"
@@ -24,8 +22,8 @@ class Veil < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/try-veil/veil/releases/download/v0.0.0-release-test/veil_0.0.0-release-test_Linux_x86_64.tar.gz"
-        sha256 "9429306bfb236e745dd8205727900a12ff13415a2a11e65ba483f0ee13c11517"
+        url "https://github.com/try-veil/veil/releases/download/v0.0.0-gorelease-test/veil_0.0.0-gorelease-test_Linux_x86_64.tar.gz"
+        sha256 "36cce7aa1c1cbc70b54fcba0d46d7b0565e1ca41327478308f59f72db0cdc562"
 
         def install
           bin.install "veil"
